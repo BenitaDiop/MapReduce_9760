@@ -62,7 +62,7 @@ quux	4
 *Question*: How would you update the simple grep above to manage __any__ type of search? (In this case it encodes the "f" / "x" searching inside the reducer function). So basically, 
 
 - **what if I wanted to find all the words that have "oo"** 
-*Given that our data has the following text 'quux bar foo labs quux foo foo' if wanted to filter the words that merely the duplicated letters "oo" we can run the following command
+*Given that our data has the following text 'quux bar foo labs quux foo foo' if wanted to filter the words that merely the duplicated letters "oo" we can run the following command*
 
 `INPUT`
 ```
@@ -75,13 +75,13 @@ fs -ls | grep oo
 `OUTPUT`
 ```
 foo	6
-``
+```
 
 
 - **the words that start in "k" but end in "e"** 
 *Given that our data has the following text 'quux bar foo labs quux foo foo' if we wanted to find the word 'quux' where the first letter starts with 'q' and ends with 'x' we can run the following command filter the results.* 
 
-INPUT
+`INPUT`
 ```bash
 docker run  \
 -v $(pwd):/usr/local/hadoop/py \
@@ -89,7 +89,7 @@ docker run  \
 /usr/local/hadoop/py/py_runner.sh count \
 fs -ls | grep "^q\w*x\b"
 ```
-OUTPUT 
+`OUTPUT` 
 ~~~
 quux	4
 ~~~
