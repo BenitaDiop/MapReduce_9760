@@ -66,7 +66,11 @@ quux	4
 
 `INPUT`
 ```
-docker run   -v $(pwd):/usr/local/hadoop/py   -it sequenceiq/hadoop-docker:2.7.1   /usr/local/hadoop/py/py_runner.sh basic fs -ls | grep oo 
+docker run \
+-v $(pwd):/usr/local/hadoop/py  \
+-it sequenceiq/hadoop-docker:2.7.1  \
+/usr/local/hadoop/py/py_runner.sh basic \
+fs -ls | grep oo 
 ```
 `OUTPUT`
 ```
@@ -79,7 +83,11 @@ foo	6
 
 INPUT
 ```bash
-docker run   -v $(pwd):/usr/local/hadoop/py   -it sequenceiq/hadoop-docker:2.7.1   /usr/local/hadoop/py/py_runner.sh count fs -ls | grep "^q\w*x\b"
+docker run  \
+-v $(pwd):/usr/local/hadoop/py \
+-it sequenceiq/hadoop-docker:2.7.1 \
+/usr/local/hadoop/py/py_runner.sh count \
+fs -ls | grep "^q\w*x\b"
 ```
 OUTPUT 
 ~~~
@@ -92,7 +100,11 @@ quux	4
 
 `INPUT {cap}`
 ```
-docker run   -v $(pwd):/usr/local/hadoop/py   -it sequenceiq/hadoop-docker:2.7.1   /usr/local/hadoop/py/py_runner.sh count fs -ls | grep '[[:upper:]]'
+docker run  \
+-v $(pwd):/usr/local/hadoop/py \
+-it sequenceiq/hadoop-docker:2.7.1  \
+/usr/local/hadoop/py/py_runner.sh count \
+fs -ls | grep '[[:upper:]]'
 ```
 `OUTPUT {NULL}` 
 ~~~
@@ -102,7 +114,11 @@ docker run   -v $(pwd):/usr/local/hadoop/py   -it sequenceiq/hadoop-docker:2.7.1
 
 `INPUT {cap}`
 ```
-docker run   -v $(pwd):/usr/local/hadoop/py   -it sequenceiq/hadoop-docker:2.7.1   /usr/local/hadoop/py/py_runner.sh count fs -ls | grep '[A-Z]'
+docker run  \
+-v $(pwd):/usr/local/hadoop/py  \
+-it sequenceiq/hadoop-docker:2.7.1 \
+/usr/local/hadoop/py/py_runner.sh count \
+fs -ls | grep '[A-Z]'
 ```
 `OUTPUT {NULL}` 
 ~~~
@@ -111,7 +127,11 @@ docker run   -v $(pwd):/usr/local/hadoop/py   -it sequenceiq/hadoop-docker:2.7.1
 
 `INPUT {lowercase}`
 ```
-docker run   -v $(pwd):/usr/local/hadoop/py   -it sequenceiq/hadoop-docker:2.7.1   /usr/local/hadoop/py/py_runner.sh count fs -ls | grep '[[:lower:]]'
+docker run  \
+-v $(pwd):/usr/local/hadoop/py \
+-it sequenceiq/hadoop-docker:2.7.1  \
+/usr/local/hadoop/py/py_runner.sh count \
+fs -ls | grep '[[:lower:]]'
 ```
 `OUTPUT` 
 ~~~
