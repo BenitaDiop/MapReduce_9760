@@ -59,11 +59,13 @@ quux	4
 
 
 
-*Question*: How would you update the simple grep above to manage __any__ type of search? (In this case it encodes the "f" / "x" searching inside the reducer function). So basically, 
+***Question: How would you update the simple grep above to manage __any__ type of search? (In this case it encodes the "f" / "x" searching inside the reducer function). So basically...*** 
 
 
 ***************
 - **what if I wanted to find all the words that have "oo"** 
+
+
 *Given that our data has the following text 'quux bar foo labs quux foo foo' if wanted to filter the words that merely the duplicated letters "oo" we can run the following command*
 
 `INPUT`
@@ -81,6 +83,7 @@ foo	6
 ********************
 
 - **the words that start in "k" but end in "e"** 
+
 *Given that our data has the following text 'quux bar foo labs quux foo foo' if we wanted to find the word 'quux' where the first letter starts with 'q' and ends with 'x' we can run the following command filter the results.* 
 
 `INPUT`
@@ -99,6 +102,7 @@ quux	4
 ************
 
 - **the words that have a single capital letter in them?** 
+
 *Given that our data has the following text 'quux bar foo labs quux foo foo' finding the words that contain a single capital letter would be lackluster because we dont have anything. Nonetheless below are two ways to filter words containe a single capital letter and one way to filter words with a single lowercase letter. 
 
 `INPUT {cap}`
